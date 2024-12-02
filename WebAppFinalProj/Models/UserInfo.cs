@@ -6,7 +6,7 @@ namespace WebAppFinalProj.Models
     {
         [Key]
         public int ID { get; set; }
-        public int MyProperty { get; set; }
+        public string Name { get; set; }
         public DateTime Birthdate { get; set; }
         public string Major { get; set; }
         public int Year { get; set; }
