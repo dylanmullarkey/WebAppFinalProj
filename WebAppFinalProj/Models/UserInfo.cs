@@ -7,8 +7,8 @@ namespace WebAppFinalProj.Models
         [Key]
         public int ID { get; set; }
         public string Name { get; set; }
-        public DateTime Birthdate { get; set; }
+        public string Birthdate { get; set; }
         public string Major { get; set; }
-        public int Year { get; set; }
+        public string Year { get; set; }
     }
 }
