@@ -24,19 +24,23 @@ namespace WebAppFinalProj.Controllers
         }
 
         // get one user and return first 5 entries in table if null
-        /*
-        [HttpGet]
-        [Route("GetUser")] 
 
-        public List<UserInfo> GetUserInfo(int id) 
+        [HttpGet]
+        [Route("GetFirstFiveUsers")]
+        public List<UserInfo> GetUserInfo(int id)
         {
-            if (_userInfoContext.Users.Where(x => x.ID == id).First() == null)
+            var user = _userInfoContext.Users.FirstOrDefault(x => x.ID == id);
+            if (user == null)
             {
                 return _userInfoContext.Users.ToList();
             }
-            else { return _userInfoContext.Users.FirstOrDefault();}
+            else
+            {
+                return new List<UserInfo> { user };
+            }
         }
-        */
+
+
         [HttpPost] //add user
         [Route("AddUser")]
 
