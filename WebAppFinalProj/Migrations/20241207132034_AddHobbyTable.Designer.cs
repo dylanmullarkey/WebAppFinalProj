@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAppFinalProj;
 
@@ -10,9 +11,10 @@ using WebAppFinalProj;
 namespace WebAppFinalProj.Migrations
 {
     [DbContext(typeof(UserInfoContext))]
-    partial class UserInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20241207132034_AddHobbyTable")]
+    partial class AddHobbyTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -11,5 +11,6 @@ namespace WebAppFinalProj
         }
 
         public DbSet<UserInfo> Users { get; set; }
+        public DbSet<Hobby> Hobbies { get; set; }
     }
 }
