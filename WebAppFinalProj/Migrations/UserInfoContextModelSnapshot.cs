@@ -46,6 +46,31 @@ namespace WebAppFinalProj.Migrations
                     b.ToTable("FavoriteCars");
                 });
 
+            modelBuilder.Entity("WebAppFinalProj.Models.FavoriteFood", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("Food1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Food2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Food3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("FavoriteFoods");
+                });
+
             modelBuilder.Entity("WebAppFinalProj.Models.Hobby", b =>
                 {
                     b.Property<int>("Id")
